@@ -2,6 +2,11 @@
 
 > An award-winning, cinematic product-reveal and scroll-driven storytelling landing page built for **MINT MELT**, artisanal pistachio gelato crafted with volcanic Sicilian Bronte pistachios.
 
+**🌐 Live Experience**: [https://mintmelt.netlify.app/](https://mintmelt.netlify.app/)
+
+[![Live Demo](https://img.shields.io/badge/Live_Demo-mintmelt.netlify.app-183B2C?style=for-the-badge&logo=netlify&logoColor=A8C686)](https://mintmelt.netlify.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-183B2C?style=for-the-badge&logo=github)](https://github.com/Sidspidy/mint-melt)
+
 ---
 
 ## ✨ Features & Architecture
@@ -99,6 +104,7 @@ mint-melt/
 
 - **Designed & Developed by**: **Sidhanathan**
 - **Role**: Creative Frontend Engineer & Digital Art Director
+- **Live Site**: [https://mintmelt.netlify.app/](https://mintmelt.netlify.app/)
 - **GitHub**: [github.com/Sidspidy](https://github.com/Sidspidy)
 - **LinkedIn**: [linkedin.com/in/sidhanathan-k-sid](https://www.linkedin.com/in/sidhanathan-k-sid)
 - **Email**: [sidhart1010@gmail.com](mailto:sidhart1010@gmail.com)

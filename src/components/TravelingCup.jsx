@@ -4,10 +4,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function TravelingCup() {
+export default function TravelingCup({ ready = true }) {
   const cupWrapperRef = useRef(null);
 
   useEffect(() => {
+    if (!ready) return;
     const el = cupWrapperRef.current;
     if (!el) return;
 
@@ -245,7 +246,9 @@ export default function TravelingCup() {
     return () => {
       mm.revert();
     };
-  }, []);
+  }, [ready]);
+
+  if (!ready) return null;
 
   return (
     <div

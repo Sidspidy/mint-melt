@@ -13,10 +13,12 @@ import Footer from './components/Footer';
 import OrderDrawer from './components/OrderDrawer';
 import TastingProfileModal from './components/TastingProfileModal';
 import TravelingCup from './components/TravelingCup';
+import Preloader from './components/Preloader';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
+  const [isAppReady, setIsAppReady] = useState(false);
   const [bagOpen, setBagOpen] = useState(false);
   const [sensoryModalOpen, setSensoryModalOpen] = useState(false);
   const [cartItems, setCartItems] = useState([
@@ -103,8 +105,18 @@ export default function App() {
       {/* Subtle organic film grain texture for luxury editorial feel */}
       <div className="grain-overlay" />
 
+      {/* Editorial Luxury Preloader */}
+      <Preloader
+        onComplete={() => {
+          setIsAppReady(true);
+          setTimeout(() => {
+            ScrollTrigger.refresh();
+          }, 150);
+        }}
+      />
+
       {/* The Master Persistent Product Layer: Traveling Ice Cream Cup across ALL sections */}
-      <TravelingCup />
+      <TravelingCup ready={isAppReady} />
 
       {/* Luxury Brand Navigation */}
       <Navbar

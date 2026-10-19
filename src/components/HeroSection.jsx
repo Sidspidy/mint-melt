@@ -94,7 +94,6 @@ export default function HeroSection({ onDiscoverClick }) {
         <video
           ref={videoRef}
           src="/assets/mint-melt-hero.mp4"
-          poster="/assets/mint-melt-cup.png"
           autoPlay
           muted
           loop

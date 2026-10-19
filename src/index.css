@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pistachio: #A8C686;
+  --color-pistachio-light: #C2DFA4;
+  --color-pistachio-deep: #8DAE6B;
+  --color-pistachio-dark: #749652;
+  
+  --color-mint: #DDF3E5;
+  --color-mint-light: #EBF7EF;
+  --color-mint-border: #C8E8D3;
+  
+  --color-cream: #FFF7E8;
+  --color-cream-warm: #FAF1DD;
+  --color-cream-dark: #F2E3C6;
+  
+  --color-forest: #183B2C;
+  --color-forest-light: #254F3C;
+  --color-forest-muted: #3D6852;
+  --color-forest-faint: rgba(24, 59, 44, 0.08);
+  
+  --color-warm-beige: #E6DCC6;
+  --color-warm-beige-dark: #D8CDAF;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+/* Base styles */
+:root {
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #A8C686;
+  color: #183B2C;
+  margin: 0;
+  padding: 0;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Editorial Serif Utility */
+.font-serif-luxury {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-feature-settings: "liga" 1, "kern" 1;
+}
+
+.font-sans-editorial {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+/* Lenis Smooth Scroll Recommended Rules */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Glassmorphism helpers */
+.glass-nav {
+  background: rgba(255, 247, 232, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-nav-dark {
+  background: rgba(24, 59, 44, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass-card {
+  background: rgba(255, 247, 232, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Subtle Film Grain Texture Overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF7E8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #183B2C;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #254F3C;
+}
+
+/* Clip path reveal utilities */
+.clip-text-reveal {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.clip-curved-top {
+  clip-path: ellipse(150% 100% at 50% 100%);
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.8deg);
+  }
+}
+
+.animate-gentle-float {
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
